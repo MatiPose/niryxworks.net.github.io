@@ -1,69 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Niryx Works</title>
-  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo-niryx.png">
+  <style>
+    body {
+      background: #0d0d0d;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .neon {
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+    }
+    .graffiti-bg {
+      background-image: url('tu-fondo-graffiti.jpg'); /* reemplazá por tu imagen de fondo graffiti si tenés */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="text-white">
 
-  <!-- Encabezado -->
-  <header class="bg-gray-800 p-6 text-center">
-    <img src="img/logo.png" alt="Logo Niryx Works" class="mx-auto w-48">
-    <p class="text-lg text-gray-300 italic mt-2">Historias indie con alma y estilo.</p>
+  <!-- Header -->
+  <header class="w-full py-4 px-6 flex items-center justify-between bg-black bg-opacity-80 border-b border-gray-700">
+    <img src="logo-niryx.png" alt="Niryx Works Logo" class="h-12">
+    <nav class="space-x-6 text-sm uppercase tracking-widest font-bold text-gray-300">
+      <a href="#" class="hover:text-cyan-400 transition">Inicio</a>
+      <a href="#" class="hover:text-cyan-400 transition">Juegos</a>
+      <a href="#" class="hover:text-cyan-400 transition">Noticias</a>
+      <a href="#" class="hover:text-cyan-400 transition">Contacto</a>
+    </nav>
   </header>
 
-  <!-- Banner Principal -->
-  <section class="bg-gray-700 p-6 text-center">
-    <img src="img/banner.jpg" alt="Banner Principal" class="mx-auto w-full">
-    <h1 class="text-4xl font-bold mt-4">Bienvenido a Niryx Works</h1>
-    <p class="text-lg mt-2">Explora nuestros últimos proyectos y noticias.</p>
+  <!-- Banner -->
+  <section class="w-full h-64 graffiti-bg flex items-center justify-center text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold neon uppercase">Bienvenido a Niryx Works</h1>
   </section>
 
   <!-- Contenido Principal -->
-  <main class="grid grid-cols-12 gap-4 p-6">
-    
-    <!-- Noticias de Juegos -->
-    <aside class="col-span-3 bg-gray-800 p-4 rounded">
-      <h2 class="text-xl font-semibold mb-2">Noticias de Juegos</h2>
-      <ul class="space-y-2 text-sm">
-        <li>Devlog: Nuevo sistema de diálogos.</li>
-        <li>Nekophoria: Demo 1.1 en camino.</li>
-        <li>Nuevo proyecto: Código N.I.R.Y.X: Reborn.</li>
-      </ul>
-    </aside>
+  <main class="grid grid-cols-1 md:grid-cols-4 gap-6 px-6 py-10">
 
-    <!-- Proyectos Destacados -->
-    <section class="col-span-6">
-      <h2 class="text-2xl font-bold mb-4">Proyectos Destacados</h2>
-      <div class="grid grid-cols-1 gap-4">
-        <div class="bg-gray-800 p-4 rounded hover:bg-gray-700 transition">
-          <h3 class="text-xl font-semibold">Nekophoria</h3>
-          <p class="text-sm">Romance, drama y nekos adorables.</p>
-        </div>
-        <div class="bg-gray-800 p-4 rounded hover:bg-gray-700 transition">
-          <h3 class="text-xl font-semibold">¡Cállate, Yukiko-senpai!</h3>
-          <p class="text-sm">Ella no habla. Con él, sí.</p>
+    <!-- Noticias de Juegos -->
+    <section class="md:col-span-1">
+      <h2 class="text-2xl font-bold mb-4 border-b border-cyan-500 pb-2">Juegos & Proyectos</h2>
+      <ul class="space-y-3 text-gray-300 text-sm">
+        <li><strong>Nekophoria:</strong> Desarrollo principal - actualización de primavera</li>
+        <li><strong>Love and Music:</strong> Ya iniciamos los concept arts 💿</li>
+        <li><strong>Cállate Yukiko-senpai:</strong> Guión en revisión final</li>
+      </ul>
+    </section>
+
+    <!-- Contenido Central -->
+    <section class="md:col-span-2">
+      <h2 class="text-2xl font-bold mb-4 border-b border-cyan-500 pb-2">Sobre Nosotros</h2>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Niryx Works es un estudio independiente que crea juegos con alma, identidad y un fuerte enfoque en la narrativa emocional. Nos gusta romper con los clichés, abrazar lo inesperado y crear personajes que te importen.
+      </p>
+
+      <div class="mt-6">
+        <h3 class="text-xl font-bold mb-2">Últimos Lanzamientos</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="bg-gray-800 rounded p-4 hover:bg-gray-700 transition">
+            <h4 class="text-lg font-semibold">My Neko Friends</h4>
+            <p class="text-sm text-gray-400">Una precuela emotiva sobre ternura y familia.</p>
+          </div>
+          <div class="bg-gray-800 rounded p-4 hover:bg-gray-700 transition">
+            <h4 class="text-lg font-semibold">Nekophoria: Touch!</h4>
+            <p class="text-sm text-gray-400">Administra tu cafetería neko con estilo y caos kawaii.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Redes Sociales -->
-    <aside class="col-span-3 bg-gray-800 p-4 rounded">
-      <h2 class="text-xl font-semibold mb-2">Últimos Tweets</h2>
-      <div class="space-y-2 text-sm">
-        <p><strong>@NiryxWorks</strong>: En desarrollo una reimaginación de Yandere 2007...</p>
-        <p><strong>@NiryxWorks</strong>: Demo de Nekophoria Touch ya disponible en Itch.io.</p>
+    <section class="md:col-span-1">
+      <h2 class="text-2xl font-bold mb-4 border-b border-cyan-500 pb-2">Redes Sociales</h2>
+      <div class="text-sm text-gray-300 space-y-4">
+        <!-- Reemplazá esto por un widget real luego -->
+        <div class="bg-gray-900 p-4 rounded">
+          <p class="italic">📢 Último tweet:</p>
+          <p>“¡Nuevo proyecto en camino... uno muy oscuro 👀!”</p>
+        </div>
+        <div class="bg-gray-900 p-4 rounded">
+          <p class="italic">🎮 Instagram:</p>
+          <p>@niryxworks</p>
+        </div>
       </div>
-    </aside>
+    </section>
 
   </main>
 
-  <!-- Pie de Página -->
-  <footer class="text-center text-xs text-gray-400 py-4">
-    © 2025 Niryx Works — Hecho con gatos, café y cariño.
+  <!-- Footer -->
+  <footer class="w-full text-center py-4 border-t border-gray-700 text-xs text-gray-500 bg-black bg-opacity-80">
+    © 2025 Niryx Works. Todos los derechos reservados.
   </footer>
 
 </body>
